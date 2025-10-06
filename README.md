@@ -70,7 +70,7 @@ docker compose up -d
 
 ---
 
-### 🔍 Troubleshooting
+###  Troubleshooting
 
 Resolve issues with these steps:
 
@@ -83,7 +83,7 @@ Resolve issues with these steps:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 We welcome contributions to improve this project! To get started:
 
@@ -97,7 +97,7 @@ We welcome contributions to improve this project! To get started:
 
 ---
 
-### 📜 License
+###  License
 
 This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
@@ -105,7 +105,7 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 ### 🌟 Acknowledgments
 
-- Built with ❤️ using [Prometheus](https://prometheus.io/), [Node Exporter](https://github.com/prometheus/node_exporter), and [Grafana](https://grafana.com/).
+- Built with ❤️ by Amin Toorchi
 - Gratitude to the open-source community for their incredible tools and resources.
 
 </xaiArtifact>
