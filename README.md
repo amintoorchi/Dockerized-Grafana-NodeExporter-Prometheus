@@ -1,109 +1,112 @@
-Grafana / NodeExporter / Prometheus Dockerized
+<xaiArtifact artifact_id="22fdcd47-e48b-429a-9af2-28c2749a7456" artifact_version_id="6135213c-4bea-4017-b70b-8294a00aae9f" title="README.md" contentType="text/markdown">
 
-This project provides a Dockerized setup for monitoring your system with Prometheus, Node Exporter, and Grafana. It's designed for easy deployment and visualization of system metrics.
-Features
+# 📊 Prometheus, Node Exporter, and Grafana Dockerized
 
-Prometheus: For collecting and storing metrics.
-Node Exporter: Exposes hardware and OS metrics from your host system.
-Grafana: Beautiful dashboards for visualizing the collected data.
-Persistent storage for Prometheus data and Grafana configurations.
-Simple Docker Compose setup for quick start.
+A powerful, Dockerized monitoring stack featuring **Prometheus**, **Node Exporter**, and **Grafana**. This project simplifies deployment and provides beautiful visualizations for system metrics. 
 
-Getting Started
-Prerequisites
+---
 
-Docker and Docker Compose installed on your machine.
+## ✨ Features
 
-Installation
+- **Prometheus**: Efficiently collects and stores system metrics. 
+- **Node Exporter**: Exposes detailed hardware and OS metrics from your host. 
+- **Grafana**: Creates stunning, customizable dashboards for data visualization. 
+- **Persistent Storage**: Safely stores Prometheus and Grafana data. 
+- **Docker Compose**: Enables quick setup with a single command. 
 
-Clone the repository:
+---
+
+### 📋 Prerequisites
+
+Ensure the following are installed on your system:
+
+-  **Docker** (latest version recommended)
+-  **Docker Compose** (version 3.8 or higher)
+
+---
+
+## 🚀 Getting Started
+
+Follow these steps to deploy the monitoring stack:
+
+### 1. Clone the Repository
+
+```bash
 git clone https://github.com/username/repo-name.git
 cd repo-name
+```
 
+### 2. Launch the Services
 
-Start the containers:
+Start the containers in detached mode:
+
+```bash
 docker compose up -d
+```
 
+### 3. Access the Services
 
+-  **Prometheus**: [http://localhost:9090](http://localhost:9090)
+-  **Grafana**: [http://localhost:3000](http://localhost:3000)  
+  *Default credentials*: `admin` / `admin` (update password after first login)
 
-Access the Services
+---
 
-Prometheus: http://localhost:9090
-Grafana: http://localhost:3000 (Default credentials: admin/admin)
+## 🛠️ Configuration
 
-Important Notes
+- **Docker Compose**: The `docker-compose.yml` is pre-configured. Customize ports or volumes as needed.
+- **Grafana Dashboards**: Import pre-existing dashboards or create custom ones after logging in.
+- **Storage**:
+  - Prometheus data is stored in `./prom_data/`.
+  - Grafana configurations are saved in `./grafana-storage/`.
+  - Both directories are auto-created on first run and listed in `.gitignore`.
 
-Data for Prometheus is stored in ./prom_data/ and for Grafana in ./grafana-storage/. These directories are ignored in .gitignore and will be created automatically on first run.
-Docker Compose version is set to "3.18" for compatibility with recent Docker versions.
-Network mode is set to "host" for Node Exporter and Prometheus to access host metrics directly. If you need portability across different systems, consider switching to a bridge network.
-Ensure ./prom_data and ./grafana-storage are added to .gitignore before pushing to GitHub to avoid uploading unnecessary data.
+> **Note**: Add `./prom_data` and `./grafana-storage` to `.gitignore` to prevent uploading sensitive data to GitHub.
 
-Configuration
+### Network Configuration
 
-The docker-compose.yml file is pre-configured. You can customize ports or volumes as needed.
-Grafana dashboards can be imported or created manually after login.
+- **Host Network Mode**: Used by Node Exporter and Prometheus for direct access to host metrics.
+- **Portability**: Switch to a `bridge` network in `docker-compose.yml` for cross-system compatibility.
 
-Troubleshooting
+---
 
-If containers fail to start, check Docker logs: docker compose logs.
-Ensure no port conflicts on 9090 or 3000.
+### 🔍 Troubleshooting
 
-Contributing
-Feel free to fork this repository and submit pull requests for improvements!
-License
-This project is licensed under the MIT License.
+Resolve issues with these steps:
 
-Grafana / NodeExporter / Prometheus Dockerized
+- **View Logs**: Check container logs for errors:
+  ```bash:disable-run
+  docker compose logs
+  ```
+- **Port Conflicts**: Ensure ports `9090` (Prometheus) and `3000` (Grafana) are available.
+- **Storage Permissions**: Verify that `./prom_data` and `./grafana-storage` have proper permissions.
 
-این پروژه یک راه‌اندازی Dockerized برای مانیتورینگ سیستم با Prometheus، Node Exporter و Grafana ارائه می‌دهد. طراحی شده برای استقرار آسان و visualization متریک‌های سیستم.
-ویژگی‌ها
+---
 
-Prometheus: برای جمع‌آوری و ذخیره متریک‌ها.
-Node Exporter: نمایش متریک‌های سخت‌افزار و سیستم عامل از هاست.
-Grafana: داشبوردهای زیبا برای visualization داده‌های جمع‌آوری‌شده.
-ذخیره‌سازی پایدار برای داده‌های Prometheus و تنظیمات Grafana.
-راه‌اندازی ساده با Docker Compose برای شروع سریع.
+## 🤝 Contributing
 
-شروع به کار
-پیش‌نیازها
+We welcome contributions to improve this project! To get started:
 
-Docker و Docker Compose روی ماشین شما نصب شده باشد.
+1.  Fork the repository.
+2.  Create a feature or bug-fix branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3.  Commit your changes and push to your fork.
+4.  Submit a pull request with a detailed description of your updates.
 
-نصب
+---
 
-کلون کردن مخزن:
-git clone https://github.com/username/repo-name.git
-cd repo-name
+### 📜 License
 
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for more details.
 
-بالا آوردن کانتینرها:
-docker compose up -d
+---
 
+### 🌟 Acknowledgments
 
+- Built with ❤️ using [Prometheus](https://prometheus.io/), [Node Exporter](https://github.com/prometheus/node_exporter), and [Grafana](https://grafana.com/).
+- Gratitude to the open-source community for their incredible tools and resources.
 
-دسترسی به سرویس‌ها
-
-Prometheus: http://localhost:9090
-Grafana: http://localhost:3000 (نام کاربری و رمز پیش‌فرض: admin/admin)
-
-نکات مهم
-
-داده‌های Prometheus در ./prom_data/ و Grafana در ./grafana-storage/ ذخیره می‌شوند. این دایرکتوری‌ها در .gitignore نادیده گرفته شده‌اند و در اولین اجرا به طور خودکار ایجاد می‌شوند.
-نسخه Docker Compose روی "3.18" تنظیم شده برای سازگاری با نسخه‌های جدید Docker.
-حالت شبکه روی "host" برای Node Exporter و Prometheus تنظیم شده تا مستقیماً به متریک‌های هاست دسترسی داشته باشند. اگر نیاز به قابلیت حمل بین سیستم‌های مختلف دارید، از شبکه bridge استفاده کنید.
-قبل از push به GitHub، مطمئن شوید ./prom_data و ./grafana-storage به .gitignore اضافه شده‌اند تا داده‌های غیرضروری آپلود نشود.
-
-پیکربندی
-
-فایل docker-compose.yml از قبل پیکربندی شده است. می‌توانید پورت‌ها یا volumeها را طبق نیاز تغییر دهید.
-داشبوردهای Grafana را می‌توانید پس از ورود import کنید یا به صورت دستی بسازید.
-
-عیب‌یابی
-
-اگر کانتینرها شروع نشدند، لاگ‌های Docker را چک کنید: docker compose logs.
-مطمئن شوید تداخل پورتی روی 9090 یا 3000 وجود ندارد.
-
-مشارکت
-از fork کردن این مخزن و ارسال pull request برای بهبودها استقبال می‌شود!
-لایسنس
-این پروژه تحت لایسنس MIT منتشر شده است.
+</xaiArtifact>
+```
