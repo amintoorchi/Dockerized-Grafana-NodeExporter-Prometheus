@@ -25,7 +25,7 @@ Ensure the following are installed on your system:
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Installation !
 
 Follow these steps to deploy the monitoring stack:
 
