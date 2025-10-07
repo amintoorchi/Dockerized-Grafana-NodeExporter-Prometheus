@@ -2,7 +2,16 @@
 
 # 📊 Prometheus, Node Exporter, and Grafana Dockerized
 
-A powerful, Dockerized monitoring stack featuring **Prometheus**, **Node Exporter**, and **Grafana**. This project simplifies deployment and provides beautiful visualizations for system metrics. 
+A powerful, Dockerized monitoring stack featuring **Prometheus**, **Node Exporter**, and **Grafana**. This project simplifies deployment and provides beautiful visualizationsfor system metrics. 
+
+
+
+
+## 📸 Dashboard Preview
+<p align="center">
+  <img src="https://grafana.com/api/dashboards/1860/images/7994/image" alt="Dashboard Preview" width="600"> 
+</p>
+
 
 ---
 
