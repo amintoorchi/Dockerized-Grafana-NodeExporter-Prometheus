@@ -41,8 +41,8 @@ Follow these steps to deploy the monitoring stack:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/username/repo-name.git
-cd repo-name
+git clone https://github.com/amintoorchi/Dockerized-Grafana-NodeExporter-Prometheus.git
+cd Dockerized-Grafana-NodeExporter-Prometheus
 ```
 
 ### 2. Launch the Services
@@ -51,6 +51,9 @@ Start the containers in detached mode:
 
 ```bash
 docker compose up -d
+
+sudo chown -R 65534:65534 ./prom_data
+sudo chmod -R 775 ./prom_data
 ```
 
 ### 3. Access the Services
